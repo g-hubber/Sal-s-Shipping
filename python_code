@@ -1,0 +1,29 @@
+weight = 4.8
+
+#ground shipping 
+if weight <= 2:
+   gs_cost = '1.50'
+elif weight > 2 and weight <= 6:
+   gs_cost = '3.00'
+elif weight > 6 and weight <= 10:
+   gs_cost = '4.00'
+else:
+   gs_cost = '4.75'
+gs_cost = (float(gs_cost) * float(weight) + float(20.00))
+print('Ground Shipping Cost:',gs_cost)
+
+#drone shipping premium
+if weight <= 2:
+   ds_cost = '4.50'
+elif weight > 2 and weight <= 6:
+   ds_cost = '9.00'
+elif weight > 6 and weight <= 10:
+   ds_cost = '12.00'
+else:
+   ds_cost = '14.20'
+ds_cost = (float(ds_cost) * float(weight))
+print('Drone Shipping Premium:',ds_cost)
+
+#ground shipping premium
+gsp_cost = 125.00
+print('Ground Shipping Premium Cost',gsp_cost)
